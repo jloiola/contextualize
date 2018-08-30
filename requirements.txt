@@ -1,0 +1,3 @@
+gunicorn
+hug
+hug_middleware_cors

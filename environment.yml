@@ -1,0 +1,12 @@
+name: contextualize
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.6.5
+  - pymssql
+  - spacy
+  - pip:
+    - gunicorn
+    - hug
+    - hug_middleware_cors
