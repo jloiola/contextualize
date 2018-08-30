@@ -17,7 +17,7 @@ conda activate contextualize
 python -m spacy download en_core_web_sm
 
 Prod
-gunicorn server:__hug_wsgi__
+gunicorn --workers 4 --worker-class=meinheld.gmeinheld.MeinheldWorker server:__hug_wsgi__
 
 Dev
-gunicorn --reload server:__hug_wsgi__
+gunicorn --reload --workers 2 --worker-class=meinheld.gmeinheld.MeinheldWorker server:__hug_wsgi__

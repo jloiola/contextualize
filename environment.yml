@@ -8,5 +8,7 @@ dependencies:
   - spacy
   - pip:
     - gunicorn
+    - meinheld
+    - waitress
     - hug
     - hug_middleware_cors
