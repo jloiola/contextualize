@@ -10,6 +10,10 @@ import spacy
 # http://www.hug.rest/website/learn
 nlp = spacy.load('en_core_web_sm')
 
+@hug.get('/')
+def ok():
+    return {'ok': True}
+
 @hug.get('/entities')
 def entities(text: str):
     doc = nlp(text)
