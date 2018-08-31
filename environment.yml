@@ -12,3 +12,4 @@ dependencies:
     - waitress
     - hug
     - hug_middleware_cors
+    - en_core_web_sm
