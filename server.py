@@ -39,13 +39,13 @@ def ok():
     log.debug('asdasdasd')
     return {'ok': True}
 
-@hug.post('/entities')
+@hug.get('/entities/text')
 def entities(text: str):
     doc = nlp(text)
     return [{'text': ent.text.strip(), 'start': ent.start_char, 'end': ent.end_char, 'label': ent.label_}
             for ent in doc.ents]
 
-@hug.get('/entities')
+@hug.get('/entities/url')
 def entities(url: str):
     html = urllib.request.urlopen(url).read()
     text = text_from_html(html)
