@@ -11,7 +11,8 @@ import spacy
 # https://marshmallow.readthedocs.io/en/3.0/
 # http://www.hug.rest/website/learn
 
-nlp = spacy.load('en_core_web_sm')
+import en_core_web_sm
+nlp = en_core_web_sm.load()
 
 logging.basicConfig()
 
