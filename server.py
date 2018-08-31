@@ -24,7 +24,7 @@ def ok():
     log.debug('asdasdasd')
     return {'ok': True}
 
-@hug.get('/entities')
+@hug.post('/entities')
 def entities(text: str):
     doc = nlp(text)
     return [{'text': ent.text, 'start': ent.start_char, 'end': ent.end_char, 'label': ent.label_}
